@@ -66,7 +66,7 @@ export default function Home() {
            <span className="text-black"> Can we rank every Zombies map? </span> Zombies Twitter is attempting to use Machine Learning and real-world Twitter data to answer this question! For over a year, a bot has been scrapping Twitter for any tweets discussing or giving opinions on Zombies maps. Those tweets were then used to fine-tune and furtger train a pre-trained BERT Sentiment Analysis model. Our Machine Learning model is now every week analyzing the latest tweets from Zombies fans to update our DEFINITIVE ranking of all the Zombies maps.
           </p>
           <h2 className='text-xl pb-2'>
-            Data compiled using over <span className='text-black font-bold'> {numTweet} </span> Zombies Fan's Tweets!
+            Data compiled using over <span className='text-black font-bold'> {numTweet} </span> Zombies Fan&rsquo;s Tweets!
           </h2>
         </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
             <BarChart barGraphData={barGraphData} height={400}/>
           }
           <p className="ml-16 mr-16 text-sm text-center text-black pb-4">
-            Our BERT Model rates tweets as 'postive', 'negative', or 'irrelevant'. Every Map's tweet's sentiment, frequency and likes are then used to give each map a Reception Score. The greater the Reception Score, the better the map.
+            Our BERT Model rates tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. Every Map&rsquo;s tweet&rsquo;s sentiment, frequency and likes are then used to give each map a Reception Score. The greater the Reception Score, the better the map.
             <span onClick={updateBarGraph} className="hover:text-gray-500 cursor-pointer"> {barGraphMessage} </span>
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
 
         <div id='helpUsImprove' className='p-4 pb-1'>
           <h1 className='text-xl text-white'> Help Zombie Twitter Improve!</h1>
-          <p className='text-sm text-white pb-2'> Help us verify our model's results and inturn create the next training set to better imporve next BERT Model.</p>
+          <p className='text-sm text-white pb-2'> Help us verify our model&rsquo;s results and inturn create the next training set to better imporve next BERT Model.</p>
           <div className='grid grid-cols-1'>
             <div className='sm:mr-2'>
               <Tweet />
