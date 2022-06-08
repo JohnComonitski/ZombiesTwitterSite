@@ -4,6 +4,7 @@ import Image from "next/image"
 import BarChart from "../components/BarChart"
 import DataBox from '../components/DataBox'
 import Tweet from "../components/Tweet"
+import MapBox from "../components/MapBox"
 import { prepBarGraph, prepBarGraphAll, prepMostTweets, prepLeastTweets, prepMostDisliked, prepMostControversial, countTweets } from "../lib/dataPrep"
 import SearchForm from "../components/SearchForm"
 
@@ -70,7 +71,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div id="chart" className="bg-white border-gray-200 border-2 rounded-lg mr-4 ml-4 mb-2" >
+        <div id="chart" className="bg-white border-gray-200 border-2 rounded-lg mr-4 ml-4 mb-2 pt-2" >
           {
             showFull ?
             <BarChart barGraphData={barGraphDataAll} height={1200}/>
@@ -78,17 +79,21 @@ export default function Home() {
             <BarChart barGraphData={barGraphData} height={400}/>
           }
           <p className="ml-16 mr-16 text-sm text-center text-black pb-4">
-            Our BERT Model rates tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. Every Map&rsquo;s tweet&rsquo;s sentiment, frequency and likes are then used to give each map a Reception Score. The greater the Reception Score, the better the map.
+            Methodology: Maps are rated using an "Approval Score". The Approval Score begins with our BERT Model rating tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. We then calculate every Map&rsquo;s approval rating (positive tweets/total tweets). Next we calculate a confidence interval, convert it into a percentage of confidence and plug that percentage of confidence into a softplus function. Finally, that number is multiplied by our approval rating to generate a final "Approval Score".
             <span onClick={updateBarGraph} className="hover:text-gray-500 cursor-pointer"> {barGraphMessage} </span>
           </p>
         </div>
 
 
-        <div id="dataBoxes" className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pb-4'>
+        <div id="dataBoxes" className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 '>
           <DataBox tweetInfo={mostTweeted}/>
           <DataBox tweetInfo={mostControversial}/>
           <DataBox tweetInfo={leastTweeted}/>
           <DataBox tweetInfo={mostDisliked}/>
+        </div>
+
+        <div id="dataBoxes" className='pb-4'>
+          <MapBox maps={mapData} />
         </div>
 
         <hr className="ml-6 mr-8"></hr>

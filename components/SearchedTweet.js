@@ -7,7 +7,7 @@ const SearchedTweet = (props) => {
 
   useEffect(()=>{
       if(tweet != undefined){
-          if(tweet.incorrect !== ""){
+          if(tweet.incorrect !== "null"){
             setShow(false)
           }
       }
