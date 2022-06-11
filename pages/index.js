@@ -79,7 +79,7 @@ export default function Home() {
             <BarChart barGraphData={barGraphData} height={400}/>
           }
           <p className="ml-16 mr-16 text-sm text-center text-black pb-4">
-            Methodology: Maps are rated using an &quot;Approval Scor&quot;". The Approval Score begins with our BERT Model rating tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. We then calculate every Map&rsquo;s approval rating (positive tweets/total tweets). Next we calculate a confidence interval, convert it into a percentage of confidence and plug that percentage of confidence into a softplus function. Finally, that number is multiplied by our approval rating to generate a final &quot;Approval Score&quot;.
+            Methodology: Maps are rated using an &quot;Approval Scor&quot;. The Approval Score begins with our BERT Model rating tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. We then calculate every Map&rsquo;s approval rating (positive tweets/total tweets). Next we calculate a confidence interval, convert it into a percentage of confidence and plug that percentage of confidence into a softplus function. Finally, that number is multiplied by our approval rating to generate a final &quot;Approval Score&quot;.
             <span onClick={updateBarGraph} className="hover:text-gray-500 cursor-pointer"> {barGraphMessage} </span>
           </p>
         </div>
