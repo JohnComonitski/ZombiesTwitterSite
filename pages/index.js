@@ -66,6 +66,7 @@ export default function Home() {
           <p className="ml-16 mr-16 text-sm pb-2">
            <span className="text-black"> Can we rank every Zombies map? </span> Zombies Twitter is attempting to use Machine Learning and real-world Twitter data to answer this question! For over a year, a bot has been scrapping Twitter for any tweets discussing or giving opinions on Zombies maps. Those tweets were then used to fine-tune and furtger train a pre-trained BERT Sentiment Analysis model. Our Machine Learning model is now every week analyzing the latest tweets from Zombies fans to update our DEFINITIVE ranking of all the Zombies maps.
           </p>
+          <p> John Comonitski (<a href="https://www.youtube.com/user/JohnyJ25">JohnyJ25</a>) - 2022 </p>
           <h2 className='text-xl pb-2'>
             Data compiled using over <span className='text-black font-bold'> {numTweet} </span> Zombies Fan&rsquo;s Tweets!
           </h2>
