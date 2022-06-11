@@ -63,10 +63,10 @@ export default function Home() {
             Zombies Twitter
           </h1>
           <hr className="ml-20 mr-20 md:ml-40 md:mr-40 lg:ml-80 lg:mr-80 pb-2"></hr>
-          <p className="ml-16 mr-16 text-sm pb-2">
+          <p className="ml-16 mr-16 text-sm pb-1">
            <span className="text-black"> Can we rank every Zombies map? </span> Zombies Twitter is attempting to use Machine Learning and real-world Twitter data to answer this question! For over a year, a bot has been scrapping Twitter for any tweets discussing or giving opinions on Zombies maps. Those tweets were then used to fine-tune and furtger train a pre-trained BERT Sentiment Analysis model. Our Machine Learning model is now every week analyzing the latest tweets from Zombies fans to update our DEFINITIVE ranking of all the Zombies maps.
           </p>
-          <p> John Comonitski (<a href="https://www.youtube.com/user/JohnyJ25">JohnyJ25</a>) - 2022 </p>
+          <p className="text-xs pb-2"> John Comonitski (<a href="https://www.youtube.com/user/JohnyJ25">JohnyJ25</a>) - 2022 </p>
           <h2 className='text-xl pb-2'>
             Data compiled using over <span className='text-black font-bold'> {numTweet} </span> Zombies Fan&rsquo;s Tweets!
           </h2>
@@ -80,7 +80,7 @@ export default function Home() {
             <BarChart barGraphData={barGraphData} height={400}/>
           }
           <p className="ml-16 mr-16 text-sm text-center text-black pb-4">
-            Methodology: Maps are rated using an &quot;Approval Scor&quot;. The Approval Score begins with our BERT Model rating tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. We then calculate every Map&rsquo;s approval rating (positive tweets/total tweets). Next we calculate a confidence interval, convert it into a percentage of confidence and plug that percentage of confidence into a softplus function. Finally, that number is multiplied by our approval rating to generate a final &quot;Approval Score&quot;.
+            Methodology: Maps are rated using an &quot;Approval Score&quot;. The Approval Score begins with our BERT Model rating tweets as &lsquo;postive&rsquo;, &lsquo;negative&rsquo;, or &lsquo;irrelevant&rsquo;. We then calculate every map&rsquo;s approval rating (positive tweets/total tweets). Next we calculate a confidence interval, convert it into a percentage of confidence and plug that percentage of confidence into a softplus function. Finally, that number is multiplied by our approval rating to generate a final &quot;Approval Score&quot;.
             <span onClick={updateBarGraph} className="hover:text-gray-500 cursor-pointer"> {barGraphMessage} </span>
           </p>
         </div>
