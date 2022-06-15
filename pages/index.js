@@ -5,6 +5,7 @@ import BarChart from "../components/BarChart"
 import DataBox from '../components/DataBox'
 import Tweet from "../components/Tweet"
 import MapBox from "../components/MapBox"
+import GameRanking from "../components/GameRanking"
 import { prepBarGraph, prepBarGraphAll, prepMostTweets, prepLeastTweets, prepMostDisliked, prepMostControversial, countTweets } from "../lib/dataPrep"
 import SearchForm from "../components/SearchForm"
 
@@ -93,8 +94,11 @@ export default function Home() {
           <DataBox tweetInfo={mostDisliked}/>
         </div>
 
-        <div id="dataBoxes" className='pb-4'>
+        <div id="dataBoxes" >
           <MapBox maps={mapData} />
+        </div>
+        <div id="dataBoxes" className='pb-4'>
+          <GameRanking maps={mapData} />
         </div>
 
         <hr className="ml-6 mr-8"></hr>
