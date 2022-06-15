@@ -104,7 +104,7 @@ const GameRanking = (props) => {
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {
             gameRanks.map((game, i)=>(
-                <p className='text-gray-700 mb-4 ml-0 sm:ml-2' key={game.name +i}> <span className='bg-gray-700 p-2 rounded-3xl mr-1 text-white'> {game.emoji}</span> <span className='font-bold'>{game.name} </span>- Avg Map Ranking: <span className='font-bold'> {game.avg.toFixed(2)} </span></p>
+                <p className='text-gray-700 mb-4 ml-0 sm:ml-2 leading-7' key={game.name +i}> <span className='bg-gray-700 p-2 rounded-3xl mr-1 text-white'> {game.emoji}</span> <span className='font-bold'>{game.name} </span>- Avg Map Ranking: <span className='font-bold'> {game.avg.toFixed(2)} </span></p>
             ))
         }
     </div>
