@@ -6,6 +6,7 @@ import DataBox from '../components/DataBox'
 import Tweet from "../components/Tweet"
 import MapBox from "../components/MapBox"
 import GameRanking from "../components/GameRanking"
+import Merch from "../components/Merch"
 import { prepBarGraph, prepBarGraphAll, prepMostTweets, prepLeastTweets, prepMostDisliked, prepMostControversial, countTweets } from "../lib/dataPrep"
 import SearchForm from "../components/SearchForm"
 
@@ -87,7 +88,7 @@ export default function Home() {
         </div>
 
 
-        <div id="dataBoxes" className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 '>
+        <div id="dataBoxes" className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ml-3 mr-3'>
           <DataBox tweetInfo={mostTweeted}/>
           <DataBox tweetInfo={mostControversial}/>
           <DataBox tweetInfo={leastTweeted}/>
@@ -97,8 +98,11 @@ export default function Home() {
         <div id="dataBoxes" >
           <MapBox maps={mapData} />
         </div>
-        <div id="dataBoxes" className='pb-4'>
+        <div id="dataBoxes" >
           <GameRanking maps={mapData} />
+        </div>
+        <div id="dataBoxes" className='pb-4'>
+          <Merch />
         </div>
 
         <hr className="ml-6 mr-8"></hr>
