@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {sortByPercentageLikesWSoftplus} from "../lib/dataPrep"
+import {sortByAdjustedPercentageLikes} from "../lib/dataPrep"
 
 const GameRanking = (props) => {
   const { maps } = props;
@@ -14,7 +14,7 @@ const GameRanking = (props) => {
 
   useEffect(()=>{
     if(maps != undefined){
-        var rankings = sortByPercentageLikesWSoftplus(maps)
+        var rankings = sortByAdjustedPercentageLikes(maps)
         var games = {
             'World At War': 0,
             'Black Ops 1': 0,  
